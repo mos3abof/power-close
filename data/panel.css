@@ -1,0 +1,14 @@
+input {
+	width: 275px;
+	margin: 15px;
+	padding: 5px;
+}
+
+h2 {
+	margin:0px;
+}
+
+.footer-message {
+	display:block;
+	font-size:0.7em;
+}
