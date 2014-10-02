@@ -28,7 +28,7 @@ Press on it, and an input field will appear. Write the keyword or domain name in
 
 Icon
 ====
-The icon used for the button is made by [Freepik](http://www.freepik.com) from [Flat Icon](http://www.flaticon.com) and is licensed under [CC BY 3.0](http://creativecommons.org/licenses/by/3.0/)
+The icon used for the button is made by [Freepik](http://www.freepik.com) from [Flat Icon](http://www.flaticon.com) and is licensed under [CC BY 3.0](http://creativecommons.org/licenses/by/3.0/). No changed were applied.
 
 
 License
