@@ -4,6 +4,6 @@
   "id": "jid1-TRtOYHYN34lsiA",
   "description": "A firefox addon, for the tab addict, to close all tabs with urls containing a keyword or a domain name",
   "author": "Mosab Ahmad <mosab.ahmad@gmail.com>",
-  "license": "MPL 2.0",
+  "license": "GPL 2.0",
   "version": "0.4"
 }
