@@ -25,7 +25,7 @@ The icon used for the logo and the toolbar button is a mash of two icons from Go
 
 In older versions of the addon, the logo used to be one of the icons designed by [Freepik](http://www.freepik.com) from
 [Flat Icon](http://www.flaticon.com), that was also licensed under [CC-BY License](http://creativecommons.org/licenses/by/3.0/),
-although a different verion of it.
+although a different version of it.
 
 License
 =======
