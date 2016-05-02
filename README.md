@@ -50,4 +50,6 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
 About the Author
 ================
-This addon was developed by [Mosab Ahmad](http://www.mos3abof.com), who is
+This addon was developed by [Mosab Ahmad](http://www.mos3abof.com), who is a
+passionate software engineer, supposedly a geek, a caffeine junkie, a food lover,
+an open source/free software believer and a runner in the make.
