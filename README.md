@@ -1,35 +1,31 @@
 Firefox Power Close
 ===================
+A firefox addon, for the tab addict, to close all tabs with urls containing a keyword or a domain name. For example,
+if you have many facebook tabs open and not in order, you can just use this addon, write "facebook.com", hit enter and
+voila, all facebook tabs -containing the string 'facebook.com'- are now closed!
 
-A firefox addon, for the tab addict, to close all tabs with urls containing a keyword or a domain name. For example, if you have many facebook tabs open and not in order, you can just use this addon, write "facebook.com", hit enter and voila, all facebook tabs are now closed!
 
-
-Installation
-============
-
-You can go to the [addon's page on firefox](https://addons.mozilla.org/en-US/firefox/addon/firefox-power-close/) and install it as you would install any other firefox addon.
-
-Or you can downaload the firefox-power-close.xpi file from code, and install it manually.
-
+Getting The Addon
+=================
+The addon can be obtained from its official [firefox addon page](https://addons.mozilla.org/en-US/firefox/addon/firefox-power-close/).
 
 Usage
 =====
-
 After installation, this icon will appear as a button in your browser :
 
 ![](https://raw.githubusercontent.com/mos3abof/firefox-power-close/master/data/icon-64.png)
 
 Press on it, and an input field will appear. Write the keyword or domain name in it and press enter, and voila!
 
-	
-
-
-
-
 Icon
 ====
-The icon used for the button is made by [Freepik](http://www.freepik.com) from [Flat Icon](http://www.flaticon.com) and is licensed under [CC BY 3.0](http://creativecommons.org/licenses/by/3.0/). No changed were applied.
+The icon used for the logo and the toolbar button is a mash of two icons from Google's
+[Material Design Icons](https://design.google.com/icons/) that are published as an open source project under the
+[CC-By License](https://creativecommons.org/licenses/by/4.0/).
 
+In older versions of the addon, the logo used to be one of the icons designed by [Freepik](http://www.freepik.com) from
+[Flat Icon](http://www.flaticon.com), that was also licensed under [CC-BY License](http://creativecommons.org/licenses/by/3.0/),
+although a different version of it.
 
 License
 =======
@@ -51,3 +47,7 @@ You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 ```
+
+About the Author
+================
+This addon was developed by [Mosab Ahmad](http://www.mos3abof.com), who is
