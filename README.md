@@ -7,7 +7,7 @@ voila, all facebook tabs -containing the string 'facebook.com'- are now closed!
 
 Getting The Addon
 =================
-The addon can be obtained from [firefox addon page](https://addons.mozilla.org/en-US/firefox/addon/firefox-power-close/).
+The addon can be obtained from its official [firefox addon page](https://addons.mozilla.org/en-US/firefox/addon/firefox-power-close/).
 
 Usage
 =====
@@ -47,3 +47,7 @@ You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 ```
+
+About the Author
+================
+This addon was developed by [Mosab Ahmad](http://www.mos3abof.com), who is
