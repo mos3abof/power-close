@@ -63,9 +63,20 @@ var script = "self.on('click', function (node, data) {" +
 	"   self.postMessage(url_to_close);" +
 	"});";
 
+// The page context.
 cm.Item({
 	label: "Close all tabs from this domain",
 	context: cm.PageContext(),
+	contentScript: script,
+	onMessage: function (url_to_close) {
+		closeTabsByKeyword(url_to_close);
+	}
+});
+
+// This context occurs when the menu is invoked on a page in which the user has made a selection.
+cm.Item({
+	label: "Close all tabs from this domain",
+	context: cm.SelectionContext(),
 	contentScript: script,
 	onMessage: function (url_to_close) {
 		closeTabsByKeyword(url_to_close);
