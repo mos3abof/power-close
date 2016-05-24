@@ -22,5 +22,15 @@
   },
   "homepage": "https://github.com/mos3abof/firefox-power-close#readme",
   "devDependencies": {
+    "grunt": "~1.0.1",
+    "grunt-contrib-concat": "~1.0.1",
+    "grunt-contrib-jshint": "~1.0.0",
+    "grunt-contrib-uglify": "~1.0.1",
+    "grunt-crx": "~0.3.4",
+    "grunt-jscs": "~2.8.0",
+    "grunt-karma": "~1.0.0",
+    "karma": "~0.13.22",
+    "karma-jasmine": "~1.0.2 ",
+    "karma-chrome-launcher": "~1.0.1"
   }
 }
