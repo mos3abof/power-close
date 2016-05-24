@@ -23,6 +23,7 @@
   "homepage": "https://github.com/mos3abof/firefox-power-close#readme",
   "devDependencies": {
     "grunt": "~1.0.1",
+    "grunt-babel": "~6.0.0",
     "grunt-contrib-concat": "~1.0.1",
     "grunt-contrib-jshint": "~1.0.0",
     "grunt-contrib-uglify": "~1.0.1",
