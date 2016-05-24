@@ -1,7 +1,7 @@
 {
   "name": "power-close",
   "version": "0.5.2",
-  "description": "A firefox addon, for the tab addict, to close all tabs with urls containing a keyword or a domain name. For example, if you have many facebook tabs open and not in order, you can just use this addon, write \"facebook.com\", hit enter and voila, all facebook tabs -containing the string 'facebook.com'- are now closed!",
+  "description": "A browser extension, for the tab addict, to close all tabs with urls containing a keyword or a domain name. For example, if you have many facebook tabs open and not in order, you can just use this extension, write \"facebook.com\", hit enter and voila, all facebook tabs -containing the string 'facebook.com'- are now closed!",
   "repository": {
     "type": "git",
     "url": "https://github.com/mos3abof/firefox-power-close.git"
