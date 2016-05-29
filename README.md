@@ -4,6 +4,13 @@ A browser extension, for the tab addict, to close all tabs with urls containing 
 if you have many facebook tabs open and not in order, you can just use this extension, write "facebook.com", hit enter and
 voila, all facebook tabs -containing the string 'facebook.com'- are now closed!
 
+Building Locally
+=================
+1. Install dependencies `npm install`
+2. Build plugin
+ * non-minified `node grunt dev`
+ * minified `node grunt [dist] # by default runs the 'dist' task`
+
 Usage
 =====
 After installation, this icon will appear as a button in your browser :
