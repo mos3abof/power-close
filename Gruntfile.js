@@ -12,6 +12,12 @@ module.exports = function (grunt) {
             options: { esversion: 6 },
             dist: ['Gruntfile.js', 'karma.conf.js', 'src/**/*.js']
         },
+        karma: {
+            options: {},
+            dist: {
+                configFile: 'karma.conf.js'
+            }
+        },
         babel: {
             options: { presets: ['es2015'] },
             dist: {
@@ -73,9 +79,11 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-crx');
     grunt.loadNpmTasks('grunt-jscs');
+    grunt.loadNpmTasks('grunt-karma');
 
-    grunt.registerTask('dev', ['clean', 'jscs', 'jshint', 'copy', 'crx']);
-    grunt.registerTask('dist', ['clean', 'jscs', 'jshint', 'babel', 'htmlmin', 'cssmin', 'uglify', 'copy', 'crx']);
+    grunt.registerTask('init', ['clean', 'jscs', 'jshint', 'karma']);
+    grunt.registerTask('dev', ['init', 'copy', 'crx']);
+    grunt.registerTask('dist', ['init', 'babel', 'htmlmin', 'cssmin', 'uglify', 'copy', 'crx']);
 
     grunt.registerTask('default', ['dist']);
 };
