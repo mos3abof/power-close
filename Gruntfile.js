@@ -6,11 +6,11 @@ module.exports = function (grunt) {
         },
         jscs: {
             options: { preset: 'airbnb', validateIndentation: 4, requireTrailingComma: false, maximumLineLength: 120 },
-            dist: ['Gruntfile.js', 'karma.conf.js', 'src/**/*.js']
+            dist: ['Gruntfile.js', 'karma.conf.js', 'src/**/*.js', 'test/**/*.js']
         },
         jshint: {
             options: { esversion: 6 },
-            dist: ['Gruntfile.js', 'karma.conf.js', 'src/**/*.js']
+            dist: ['Gruntfile.js', 'karma.conf.js', 'src/**/*.js', 'test/**/*.js']
         },
         karma: {
             options: {},
