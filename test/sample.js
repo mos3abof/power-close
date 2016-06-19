@@ -7,9 +7,9 @@
             expect(value).toBe(true);
         });
 
-        it('contains spec with another expectation that fails', function () {
-            const value = true;
-            expect(value).toBe(false);
-        });
+        //it('contains spec with another expectation that fails', function () {
+        //    const value = true;
+        //    expect(value).toBe(false);
+        //});
     });
 })();
