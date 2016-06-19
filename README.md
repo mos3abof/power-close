@@ -11,6 +11,10 @@ Building Locally
  * non-minified `node grunt dev`
  * minified `node grunt [dist] # by default runs the 'dist' task`
 
+***Note:*** Due to an issue in grunt-jpm where it requires grunt 0.4.0 as a peer depedency, step 1 might fail.
+As a work around please modify the package.json file for grunt-jpm peerDependencies to `"grunt": ">=0.4.0"`.
+And please bump this pull request to fix it: https://github.com/rpl/grunt-jpm/pull/9
+
 Usage
 =====
 After installation, this icon will appear as a button in your browser :
