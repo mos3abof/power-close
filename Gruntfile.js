@@ -67,6 +67,12 @@ module.exports = function (grunt) {
                 zipDest: 'dist/chrome/',
                 options: { privateKey: 'src/chrome/dev_key.pem' }
             }
+        },
+        jpm: {
+            options: {
+                src: 'src/firefox/',
+                xpi: 'dist/firefox/'
+            }
         }
     });
 
@@ -78,12 +84,13 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-crx');
+    grunt.loadNpmTasks('grunt-jpm');
     grunt.loadNpmTasks('grunt-jscs');
     grunt.loadNpmTasks('grunt-karma');
 
     grunt.registerTask('init', ['clean', 'jscs', 'jshint', 'karma']);
-    grunt.registerTask('dev', ['init', 'copy', 'crx']);
-    grunt.registerTask('dist', ['init', 'babel', 'htmlmin', 'cssmin', 'uglify', 'copy', 'crx']);
+    grunt.registerTask('dev', ['init', 'copy', 'crx', 'jpm:xpi']);
+    grunt.registerTask('dist', ['init', 'babel', 'htmlmin', 'cssmin', 'uglify', 'copy', 'crx', 'jpm:xpi']);
 
     grunt.registerTask('default', ['dist']);
 };

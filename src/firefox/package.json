@@ -1,0 +1,17 @@
+{
+  "title": "Power Close",
+  "id": "jid1-TRtOYHYN34lsiA@jetpack",
+  "name": "firefox-power-close",
+  "version": "0.5.2",
+  "description": "A firefox addon to close all tabs based on domain name or keyword.",
+  "main": "index.js",
+  "author": "Mosab Ahmad",
+  "engines": {
+    "firefox": ">=38.0a1",
+    "fennec": ">=38.0a1"
+  },
+  "license": "GPL v2.0",
+  "keywords": [
+    "jpm"
+  ]
+}
