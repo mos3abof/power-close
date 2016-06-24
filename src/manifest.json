@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Power Close",
   "version": "0.5.2",
-  "description": "A browser extension, for the tab addict, to close all tabs with urls containing a keyword or a domain name. For example, if you have many facebook tabs open and not in order, you can just use this extension, write \"facebook.com\", hit enter and voila, all facebook tabs -containing the string 'facebook.com'- are now closed!",
+  "description": "A browser extension, for the tab addict, to close all tabs with urls containing a keyword or a domain name.",
   "icons": {
     "16": "icons/16.png",
     "48": "icons/48.png",
