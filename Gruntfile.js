@@ -6,11 +6,11 @@ module.exports = function (grunt) {
         },
         jscs: {
             options: { preset: 'airbnb', validateIndentation: 4, requireTrailingComma: false, maximumLineLength: 120 },
-            dist: ['Gruntfile.js', 'karma.conf.js', 'src/**/*.js']
+            dist: ['Gruntfile.js', 'karma.conf.js', 'src/**/*.js', 'test/**/*.js']
         },
         jshint: {
             options: { esversion: 6 },
-            dist: ['Gruntfile.js', 'karma.conf.js', 'src/**/*.js']
+            dist: ['Gruntfile.js', 'karma.conf.js', 'src/**/*.js', 'test/**/*.js']
         },
         karma: {
             options: {},
@@ -22,8 +22,8 @@ module.exports = function (grunt) {
             options: { presets: ['es2015'] },
             dist: {
                 files: {
-                    'temp/background.js': 'src/background.js',
-                    'temp/popup/popup.js': 'src/popup/popup.js'
+                    'temp/chrome/background.js': 'src/chrome/background.js',
+                    'temp/chrome/popup/popup.js': 'src/chrome/popup/popup.js'
                 }
             }
         },
@@ -31,7 +31,7 @@ module.exports = function (grunt) {
             options: { collapseWhitespace: true },
             dist: {
                 files: {
-                    'temp/popup/popup.html': 'src/popup/popup.html'
+                    'temp/chrome/popup/popup.html': 'src/chrome/popup/popup.html'
                 }
             }
         },
@@ -39,7 +39,7 @@ module.exports = function (grunt) {
             options: {},
             dist: {
                 files: {
-                    'temp/popup/popup.css': 'src/popup/popup.css'
+                    'temp/chrome/popup/popup.css': 'src/chrome/popup/popup.css'
                 }
             }
         },
@@ -47,8 +47,8 @@ module.exports = function (grunt) {
             options: {},
             dist: {
                 files: {
-                    'temp/background.js': 'temp/background.js',
-                    'temp/popup/popup.js': 'temp/popup/popup.js'
+                    'temp/chrome/background.js': 'temp/chrome/background.js',
+                    'temp/chrome/popup/popup.js': 'temp/chrome/popup/popup.js'
                 }
             }
         },
@@ -56,16 +56,22 @@ module.exports = function (grunt) {
             options: {},
             dist: {
                 files: [
-                    { expand: true, cwd: 'src/', src: ['icons/*', 'manifest.json'], dest: 'temp/' }
+                    { expand: true, cwd: 'src/', src: ['chrome/icons/*', 'chrome/manifest.json'], dest: 'temp/' }
                 ]
             }
         },
         crx: {
             dist: {
-                src: 'temp/**/*',
-                dest: 'dist/',
-                zipDest: 'dist/',
-                options: { privateKey: 'dev_key.pem' }
+                src: 'temp/chrome/**/*',
+                dest: 'dist/chrome/',
+                zipDest: 'dist/chrome/',
+                options: { privateKey: 'src/chrome/dev_key.pem' }
+            }
+        },
+        jpm: {
+            options: {
+                src: 'src/firefox/',
+                xpi: 'dist/firefox/'
             }
         }
     });
@@ -78,12 +84,13 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-crx');
+    grunt.loadNpmTasks('grunt-jpm');
     grunt.loadNpmTasks('grunt-jscs');
     grunt.loadNpmTasks('grunt-karma');
 
     grunt.registerTask('init', ['clean', 'jscs', 'jshint', 'karma']);
-    grunt.registerTask('dev', ['init', 'copy', 'crx']);
-    grunt.registerTask('dist', ['init', 'babel', 'htmlmin', 'cssmin', 'uglify', 'copy', 'crx']);
+    grunt.registerTask('dev', ['init', 'copy', 'crx', 'jpm:xpi']);
+    grunt.registerTask('dist', ['init', 'babel', 'htmlmin', 'cssmin', 'uglify', 'copy', 'crx', 'jpm:xpi']);
 
     grunt.registerTask('default', ['dist']);
 };
