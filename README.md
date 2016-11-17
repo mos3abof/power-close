@@ -30,8 +30,8 @@ although a different version of it.
 License
 =======
 ```
-Firefox Power Close, close firefox tabs based on keywords or domain names
-Copyright (C) 2014  Mosab Ahmad
+Power Close, close browser tabs based on keywords or domain names
+Copyright (C) 2014  Mosab Ibrahim
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License
@@ -50,6 +50,6 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
 About the Author
 ================
-This addon was developed by [Mosab Ahmad](http://www.mos3abof.com), who is a
+This addon was developed by [Mosab Ibrahim](http://www.mos3abof.com), who is a
 passionate software engineer, supposedly a geek, a caffeine junkie, a food lover,
 an open source/free software believer and a runner in the make.
