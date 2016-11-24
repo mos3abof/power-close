@@ -41,7 +41,7 @@ function closeTabsByKeyword(keyword) {
 		tabs
 	)
 		{
-			if (tab.url.indexOf(keyword) > -1) {
+			if (tab.url.indexOf(keyword) > -1 && !tab.isPinned) {
 				tab.close();
 			}
 		}
