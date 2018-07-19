@@ -1,13 +1,19 @@
-Firefox Power Close
+Power Close
 ===================
-A firefox addon, for the tab addict, to close all tabs with urls containing a keyword or a domain name. For example,
-if you have many facebook tabs open and not in order, you can just use this addon, write "facebook.com", hit enter and
+A browser extension, for the tab addict, to close all tabs with urls containing a keyword or a domain name. For example,
+if you have many facebook tabs open and not in order, you can just use this extension, write "facebook.com", hit enter and
 voila, all facebook tabs -containing the string 'facebook.com'- are now closed!
 
-
-Getting The Addon
+Building Locally
 =================
-The addon can be obtained from its official [firefox addon page](https://addons.mozilla.org/en-US/firefox/addon/firefox-power-close/).
+1. Install dependencies `npm install`
+2. Build plugin
+ * non-minified `node grunt dev`
+ * minified `node grunt [dist] # by default runs the 'dist' task`
+
+***Note:*** Due to an issue in grunt-jpm where it requires grunt 0.4.0 as a peer depedency, step 1 might fail.
+As a work around please modify the package.json file for grunt-jpm peerDependencies to `"grunt": ">=0.4.0"`.
+And please bump this pull request to fix it: https://github.com/rpl/grunt-jpm/pull/9
 
 Usage
 =====
@@ -30,7 +36,7 @@ although a different version of it.
 License
 =======
 ```
-Firefox Power Close, close firefox tabs based on keywords or domain names
+Power Close, close browser tabs based on keywords or domain names
 Copyright (C) 2014  Mosab Ibrahim
 
 This program is free software; you can redistribute it and/or
