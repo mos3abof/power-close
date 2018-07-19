@@ -1,0 +1,22 @@
+html, body {
+	padding-top:25px;
+    height: 160px;
+    width: 300px;
+    overflow-y:hidden;
+  	overflow-x:hidden;
+}
+
+input {
+    width: 275px;
+    margin: 15px;
+    padding: 5px;
+}
+
+h2 {
+    margin: 0;
+}
+
+.footer-message {
+    display: block;
+    font-size: 0.7em;
+}

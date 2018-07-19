@@ -1,2 +1,9 @@
+# IntelliJ project files
+.idea*
+*.iml
 *.swp
-.idea/*
+# npm dependencies
+node_modules
+# build and distribution folders
+temp
+dist
