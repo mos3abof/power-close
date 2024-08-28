@@ -8,19 +8,50 @@ closed!
 
 # Building Locally
 
-1. Install dependencies `npm install`
-2. Build plugin
-   * non-minified `node grunt dev`
-   * minified `node grunt [dist] # by default runs the 'dist' task`
+Just run `make` in the root directory:
 
-***Note:*** Due to an issue in `grunt-jpm` where it requires grunt 0.4.0 as a
-peer dependency, step 1 might fail.  As a work around please modify the
-package.json file for grunt-jpm peerDependencies to `"grunt": ">=0.4.0"`.  And
-please bump this pull request to fix it: https://github.com/rpl/grunt-jpm/pull/9
+```
+$ make
+```
+
+Built plugins will live in the `dist` directory:
+
+```
+➜  power-close git:(master) tree dist
+dist
+├── chrome
+│   ├── background.js
+│   ├── icons
+│   │   ├── 128.png
+│   │   ├── 16.png
+│   │   ├── 19.png
+│   │   ├── 38.png
+│   │   └── 48.png
+│   ├── manifest.json
+│   ├── popup
+│   │   ├── popup.css
+│   │   ├── popup.html
+│   │   └── popup.js
+│   └── power-close.zip
+└── firefox
+    ├── background.js
+    ├── icons
+    │   ├── 128.png
+    │   ├── 16.png
+    │   ├── 19.png
+    │   ├── 38.png
+    │   └── 48.png
+    ├── manifest.json
+    ├── popup
+    │   ├── popup.css
+    │   ├── popup.html
+    │   └── popup.js
+    └── power-close.zip
+```
 
 # Usage
 
-After installation, this icon will appear as a button in your browser :
+After installation, this icon will appear as a button in your browser:
 
 ![](https://raw.githubusercontent.com/mos3abof/firefox-power-close/master/data/icon-64.png)
 
