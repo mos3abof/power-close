@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Power Close — Options</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <h1>Power Close</h1>
+  <form id="options-form">
+    <fieldset>
+      <legend>Tab filtering</legend>
+      <label>
+        <input type="checkbox" id="excludeCurrentTab">
+        Don't close the current tab
+      </label>
+      <label>
+        <input type="checkbox" id="excludePinnedTabs">
+        Don't close pinned tabs
+      </label>
+      <label>
+        <input type="checkbox" id="excludeExtensionPages">
+        Don't close extension pages
+      </label>
+    </fieldset>
+    <fieldset>
+      <legend>Matching</legend>
+      <label>
+        <input type="checkbox" id="caseSensitive">
+        Case-sensitive keyword matching
+      </label>
+    </fieldset>
+    <div class="actions">
+      <button type="submit">Save</button>
+      <span id="status"></span>
+    </div>
+  </form>
+  <script src="options.js"></script>
+</body>
+</html>

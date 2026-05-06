@@ -1,29 +1,35 @@
+VERSION := $(shell grep -o '"version": *"[^"]*"' src/manifest.firefox.json | grep -o '[0-9][0-9.]*')
+
+.PHONY: all clean build build-firefox build-chrome lint run
+
 all: clean build
 
-# clean
 clean:
 	rm -rf dist/*
 
-# build
-build:
-	mkdir -p dist/{firefox,chrome}
+build: build-firefox build-chrome
 
-	# copy manifest.json
-	cp src/manifest.json dist/firefox
-	cp src/manifest.json dist/chrome
+build-firefox:
+	mkdir -p dist/firefox
+	cp src/manifest.firefox.json dist/firefox/manifest.json
+	cp src/background.js        dist/firefox/
+	cp -rf src/popup            dist/firefox/
+	cp -rf src/icons            dist/firefox/
+	cp -rf src/options          dist/firefox/
+	(cd dist/firefox && zip -rm ../power-close-$(VERSION)-firefox.zip *)
 
-	# copy background.js
-	cp src/background.js dist/firefox
-	cp src/background.js dist/chrome
-	
-	# copy popup
-	cp -rf src/popup dist/firefox
-	cp -rf src/popup dist/chrome
+build-chrome:
+	mkdir -p dist/chrome
+	cp src/manifest.chrome.json dist/chrome/manifest.json
+	cp src/background.js        dist/chrome/
+	cp -rf src/popup            dist/chrome/
+	cp -rf src/icons            dist/chrome/
+	cp -rf src/options          dist/chrome/
+	(cd dist/chrome && zip -rm ../power-close-$(VERSION)-chrome.zip *)
 
-	# copy icons
-	cp -rf src/icons dist/firefox
-	cp -rf src/icons dist/chrome
+# Requires: npm install -g web-ext
+lint: build-firefox
+	web-ext lint --source-dir=dist/firefox
 
-	# zip the folders
-	(cd ./dist/firefox/; zip -rm power-close.zip *)
-	(cd ./dist/chrome/; zip -rm power-close.zip *)
+run: build-firefox
+	web-ext run --source-dir=dist/firefox

@@ -1,15 +1,19 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <link type="text/css" rel="stylesheet" href="popup.css">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
 </head>
 <body>
-<h2>Power Close</h2>
-<input type="text" placeholder="Domain name, or keyword, to be closed" id="edit-box"/>
-<span class="footer-message">
-	Press <i>Enter</i> to close them all or <i>Esc</i> to cancel.
-	<br/><br/>
-	<i>For more information visit <a href="https://www.power-close.com" target="_blank"><i>power-close.com</i></a>.</i>
-</span>
-<script type="application/javascript" src="popup.js"></script>
+  <h2>Power Close</h2>
+  <input type="text" placeholder="Domain name or keyword" id="edit-box" autocomplete="off">
+  <span class="footer-message">
+    <i>Enter</i> to close matching tabs &nbsp;·&nbsp; <i>Esc</i> to cancel
+    <br><br>
+    <a href="https://arabesquelabs.github.io/power-close" target="_blank">power-close</a>
+    &nbsp;·&nbsp;
+    <a href="#" id="options-link">Options</a>
+  </span>
+  <script src="popup.js"></script>
 </body>
 </html>
