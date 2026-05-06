@@ -1,0 +1,22 @@
+name: Deploy website
+
+on:
+  push:
+    branches: [master]
+    paths: [website/**]
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./website
+          publish_branch: gh-pages
