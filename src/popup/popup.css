@@ -1,22 +1,51 @@
 html, body {
-	padding-top:25px;
-    height: 160px;
-    width: 300px;
-    overflow-y:hidden;
-  	overflow-x:hidden;
-}
-
-input {
-    width: 275px;
-    margin: 15px;
-    padding: 5px;
+  margin: 0;
+  padding: 1rem;
+  width: 300px;
+  font-family: system-ui, sans-serif;
+  color: #1f2937;
 }
 
 h2 {
-    margin: 0;
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
 }
 
 .footer-message {
-    display: block;
-    font-size: 0.7em;
+  display: block;
+  margin-top: 0.6rem;
+  font-size: 0.7rem;
+  color: #9ca3af;
+  line-height: 1.5;
+}
+
+.footer-message i {
+  font-style: normal;
+  font-weight: 600;
+  color: #6b7280;
+}
+
+.footer-message a {
+  color: #6366f1;
+  text-decoration: none;
+}
+
+.footer-message a:hover {
+  text-decoration: underline;
 }
