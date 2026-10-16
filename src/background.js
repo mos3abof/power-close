@@ -1,5 +1,8 @@
 (function () {
   'use strict';
+
+  // The context menu's path. The popup closes the tabs it counted itself,
+  // so the figure it shows and the tabs it closes are the same list.
   function closeTabsByKeyword(keyword) {
     if (!keyword) {
       return;
@@ -13,14 +16,6 @@
       }
     });
   }
-
-  chrome.runtime.onMessage.addListener(function (response) {
-    if (response.event !== 'text-entered') {
-      return;
-    }
-
-    closeTabsByKeyword(response.text);
-  });
 
   chrome.contextMenus.create({
     title: 'Close all tabs from this domain',

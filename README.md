@@ -32,7 +32,11 @@ dist
 │   │   ├── popup.css
 │   │   ├── popup.html
 │   │   └── popup.js
-│   └── power-close.zip
+│   ├── power-close.zip
+│   └── vendor
+│       └── arabesque
+│           ├── arabesque.css
+│           └── fonts
 └── firefox
     ├── background.js
     ├── icons
@@ -46,7 +50,11 @@ dist
     │   ├── popup.css
     │   ├── popup.html
     │   └── popup.js
-    └── power-close.zip
+    ├── power-close.zip
+    └── vendor
+        └── arabesque
+            ├── arabesque.css
+            └── fonts
 ```
 
 # Usage
@@ -56,7 +64,27 @@ After installation, this icon will appear as a button in your browser:
 ![](https://raw.githubusercontent.com/mos3abof/firefox-power-close/master/data/icon-64.png)
 
 Press on it, and an input field will appear. Write the keyword or domain name in
-it and press enter, and voila!
+it: the popup counts the tabs it matches as you type, across every window, so
+you can see what will close before anything does. Press enter, or the button
+that names the count, and voila! It then tells you how many it closed.
+
+You can also right-click a page and choose "Close all tabs from this domain".
+
+# Design
+
+The popup is built on the [Arabesque Labs design
+system](https://design.arabesquelabs.com/)
+([source](https://github.com/ArabesqueLabs/design-system)): its tokens, its
+components (`al-field`, `al-button`, `al-notice`...) and its rule that every
+consequence of an action is shown before the action is taken. It follows the
+browser's light or dark setting, and the keyboard path the extension was always
+built around is unchanged.
+
+An extension page can't load CSS or fonts from a remote origin under its content
+security policy, so the built design system is copied into
+`src/vendor/arabesque/`. See
+[`src/vendor/arabesque/README.md`](src/vendor/arabesque/README.md) for what came
+from where, and how to upgrade it.
 
 # Icon
 

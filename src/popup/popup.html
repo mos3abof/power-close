@@ -1,15 +1,76 @@
-<html>
+<!doctype html>
+<html lang="en" dir="ltr">
 <head>
-    <link type="text/css" rel="stylesheet" href="popup.css">
+<meta charset="utf-8">
+<title>Power Close</title>
+<link rel="stylesheet" href="../vendor/arabesque/fonts/fonts.css">
+<link rel="stylesheet" href="../vendor/arabesque/arabesque.css">
+<link rel="stylesheet" href="popup.css">
 </head>
 <body>
-<h2>Power Close</h2>
-<input type="text" placeholder="Domain name, or keyword, to be closed" id="edit-box"/>
-<span class="footer-message">
-	Press <i>Enter</i> to close them all or <i>Esc</i> to cancel.
-	<br/><br/>
-	<i>For more information visit <a href="https://www.power-close.com" target="_blank"><i>power-close.com</i></a>.</i>
-</span>
-<script type="application/javascript" src="popup.js"></script>
+
+<!-- The icons the popup uses, from the design system's sprite (dist/icons.svg),
+     inlined: a popup is one document, and <use> across files is fussy here. -->
+<svg hidden aria-hidden="true">
+  <symbol id="al-icon-success" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter"><circle cx="12" cy="12" r="8.5"/><path d="M8 12.5l2.75 2.75L16 10"/></symbol>
+  <symbol id="al-icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+</svg>
+
+<main class="pc-popup al-stack">
+
+  <div class="al-cluster al-cluster--between pc-head">
+    <div class="al-cluster pc-brand">
+      <!-- The toolbar icon, decorative: the title beside it already names
+           the extension. Drawn in the text's colour, like the system's own
+           icons. -->
+      <span class="pc-logo" aria-hidden="true"></span>
+      <h1 class="pc-title">Power Close</h1>
+    </div>
+    <!-- Dismisses the popup. Named for what it closes, so it isn't taken
+         for the action that closes tabs. -->
+    <button class="al-button al-button--sm al-button--icon pc-dismiss"
+            id="dismiss" type="button" aria-label="Close this popup">
+      <svg class="al-icon" aria-hidden="true"><use href="#al-icon-close"/></svg>
+    </button>
+  </div>
+
+  <div class="al-field">
+    <label class="al-label" for="keyword">Domain or keyword</label>
+    <input class="al-input" id="keyword" type="text" inputmode="url"
+           autocomplete="off" spellcheck="false"
+           placeholder="youtube.com" aria-describedby="keyword-hint matches">
+    <p class="al-hint" id="keyword-hint">Matches anywhere in a tab's address, in every window.</p>
+  </div>
+
+  <!-- What Enter will do, counted as you type: the one destructive action
+       names what it closes, and is unavailable with its reason until there
+       is something to close. -->
+  <p class="al-side-effect" id="matches" role="status">
+    <span id="matches-text">Type to see how many tabs match.</span>
+  </p>
+
+  <div class="al-cluster pc-actions">
+    <button class="al-button al-button--sm al-button--danger"
+            id="close" type="button" aria-disabled="true"
+            aria-describedby="matches">Close tabs</button>
+    <p class="pc-keys">
+      <kbd class="al-kbd">Enter</kbd> to close,
+      <kbd class="al-kbd">Esc</kbd> to cancel
+    </p>
+  </div>
+
+  <!-- What happened, after the fact; it stays until the next action. -->
+  <div class="al-notice al-notice--success" id="done" hidden>
+    <svg class="al-icon" aria-hidden="true"><use href="#al-icon-success"/></svg>
+    <div class="al-notice__body"><p id="done-text"></p></div>
+  </div>
+
+  <footer class="pc-footer">
+    <a href="https://www.power-close.com" target="_blank" rel="noreferrer">power-close.com</a>
+  </footer>
+
+</main>
+
+<script src="popup.js"></script>
 </body>
 </html>

@@ -24,6 +24,10 @@ build:
 	cp -rf src/icons dist/firefox
 	cp -rf src/icons dist/chrome
 
+	# copy the vendored design system (the popup's CSS and fonts)
+	cp -rf src/vendor dist/firefox
+	cp -rf src/vendor dist/chrome
+
 	# zip the folders
 	(cd ./dist/firefox/; zip -rm power-close.zip *)
 	(cd ./dist/chrome/; zip -rm power-close.zip *)
