@@ -62,9 +62,23 @@
   margin-block-start: var(--al-space-12);
 }
 .shot-fig { margin: 0; }
-.shot-fig figcaption { display: flex; flex-direction: column; gap: var(--al-space-1); margin-block-start: var(--al-space-4); }
+.shot-fig figcaption { display: flex; flex-direction: column; gap: var(--al-space-1); }
+/* The screenshots aren't all the same height, so each figure takes two of
+   the gallery's rows (the picture, then the caption) through a subgrid:
+   the captions start on one line, under the tallest picture. */
+.shot-fig {
+  display: grid;
+  grid-row: span 2;
+  grid-template-rows: subgrid;
+  row-gap: var(--al-space-4);
+}
+.shot-fig picture { align-self: start; }
 .shot-fig figcaption strong { font-size: var(--al-text-lg); font-weight: var(--al-weight-medium); }
 .shot-fig figcaption span { font-family: var(--al-font-serif); color: var(--al-color-text-muted); }
+
+/* The sections' eyebrows (What it does, Screenshots, Questions): larger and
+   heavier than the system's, so they read at a glance. */
+.al-section__head .al-eyebrow { font-size: var(--al-text-md); font-weight: var(--al-weight-semibold); }
 
 /* Questions: the head beside the answers, on a wide screen. */
 .questions { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--al-space-8); align-items: start; }
@@ -82,6 +96,10 @@
 @media (max-width: 40rem) {
   .features { grid-template-columns: minmax(0, 1fr); margin-block-start: var(--al-space-8); }
   .features li, .features li:nth-child(n) { padding: var(--al-space-6) 0; border-inline-start: 0; }
+  /* The install buttons, on a phone: one under the other, the same width,
+     taller, and centred. */
+  .hero__actions, .al-cta__actions { flex-direction: column; align-items: stretch; inline-size: min(100%, 20rem); margin-inline: auto; }
+  .hero__actions .pc-store, .al-cta__actions .pc-store { --al-button-height: 3.75rem; justify-content: center; font-size: var(--al-text-lg); }
 }
 
 
@@ -143,6 +161,14 @@
 }
 .pc-coffee:hover { background: #f5d000; }
 .pc-coffee .pc-brand-icon { inline-size: 1.25rem; block-size: 1.25rem; }
+/* The header's links: in the text's colour, not the muted one, and a step
+   larger, so they read over the hero's pattern. */
+.al-site-header__nav a,
+.al-site-header .pc-icon-link { color: var(--al-color-text); font-size: var(--al-text-md); font-weight: var(--al-weight-medium); }
+.al-site-header__nav a:hover,
+.al-site-header .pc-icon-link:hover { color: var(--al-color-accent); }
+.al-site-header__menu li a { font-weight: var(--al-weight-medium); }
+
 /* In the header, GitHub reads as one of the nav's links: no underline
    until hovered, as theirs. */
 .al-site-header .pc-icon-link { text-decoration: none; }
