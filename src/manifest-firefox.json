@@ -22,7 +22,7 @@
       "background.js"
     ]
   },
-  "homepage_url": "https://github.com/mos3abof/firefox-power-close",
+  "homepage_url": "https://github.com/ArabesqueLabs/power-close",
   "permissions": [
     "tabs",
     "contextMenus"

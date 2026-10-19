@@ -8,7 +8,7 @@ clean:
 
 # build
 build:
-	mkdir -p dist/{firefox,chrome}
+	mkdir -p dist/firefox dist/chrome
 
 	# copy browser-specific manifests
 	cp src/manifest-firefox.json dist/firefox/manifest.json
@@ -57,7 +57,6 @@ chrome: clean
 # validate manifests
 validate:
 	@echo "Validating manifests..."
-	@python3 -m json.tool src/manifest.json > /dev/null && echo "✓ src/manifest.json is valid JSON"
 	@python3 -m json.tool src/manifest-firefox.json > /dev/null && echo "✓ Firefox manifest is valid JSON"
 	@python3 -m json.tool src/manifest-chrome.json > /dev/null && echo "✓ Chrome manifest is valid JSON"
 
