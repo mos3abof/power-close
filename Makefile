@@ -1,5 +1,7 @@
 all: clean build
 
+.PHONY: all clean build firefox chrome validate screenshots
+
 # clean
 clean:
 	rm -rf dist/*
@@ -58,3 +60,9 @@ validate:
 	@python3 -m json.tool src/manifest.json > /dev/null && echo "✓ src/manifest.json is valid JSON"
 	@python3 -m json.tool src/manifest-firefox.json > /dev/null && echo "✓ Firefox manifest is valid JSON"
 	@python3 -m json.tool src/manifest-chrome.json > /dev/null && echo "✓ Chrome manifest is valid JSON"
+
+# screenshots of the popup, light and dark, for the website and the README
+# and a GIF of it in use (needs Node 22+, Chrome and ffmpeg; see
+# scripts/screenshots.mjs)
+screenshots:
+	node scripts/screenshots.mjs
