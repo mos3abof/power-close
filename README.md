@@ -59,16 +59,29 @@ dist
 
 # Usage
 
-After installation, this icon will appear as a button in your browser:
-
-![](https://raw.githubusercontent.com/mos3abof/firefox-power-close/master/data/icon-64.png)
-
-Press on it, and an input field will appear. Write the keyword or domain name in
+After installation, the Power Close icon appears as a button in your browser's
+toolbar. Press on it, and an input field will appear. Write the keyword or domain name in
 it: the popup counts the tabs it matches as you type, across every window, so
 you can see what will close before anything does. Press enter, or the button
 that names the count, and voila! It then tells you how many it closed.
 
 You can also right-click a page and choose "Close all tabs from this domain".
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="website/screenshots/demo-dark.gif">
+  <img src="website/screenshots/demo-light.gif" alt="The Power Close popup in use: github.com is typed in, “Closes 4 of 12 open tabs.” appears above the Close 4 tabs button, and Enter closes them: “Closed 4 tabs.”" width="320">
+</picture>
+
+The screenshots, on the website and here, are taken by `make screenshots`
+(Node 22+, Chrome and ffmpeg): the popup from `src/`, over a dozen made-up
+tabs, in light and dark, and a GIF of it in use.
+
+# Website
+
+[power-close.com](https://www.power-close.com) is the static site in
+`website/`, with no build step: deploy the folder as it is. It's built on the
+same design system, vendored into `website/vendor/arabesque/` (see the
+README there).
 
 # Design
 
