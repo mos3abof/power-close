@@ -1,6 +1,6 @@
 all: clean build
 
-.PHONY: all clean build firefox chrome validate screenshots
+.PHONY: all clean build firefox chrome validate screenshots social
 
 # clean
 clean:
@@ -65,3 +65,8 @@ validate:
 # scripts/screenshots.mjs)
 screenshots:
 	node scripts/screenshots.mjs
+
+# the social card (Open Graph, X), in English and Arabic, 1200x630, to
+# website/img/social/ (needs Node 22+ and Chrome; see social/render.mjs)
+social:
+	node social/render.mjs

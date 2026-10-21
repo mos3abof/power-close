@@ -6,6 +6,96 @@
   <title>Power Close · Close every tab that matches, at once</title>
   <meta name="description" content="Power Close is a browser extension for Chrome and Firefox that closes every tab whose address has a domain or keyword in it, and tells you how many before it does.">
   <meta name="author" content="Mosab Ibrahim">
+  <link rel="canonical" href="https://power-close.com/">
+  <link rel="alternate" hreflang="en" href="https://power-close.com/">
+  <link rel="alternate" hreflang="x-default" href="https://power-close.com/">
+  <!-- Open Graph and X: how a link to this page is shown. The card is
+       social/card.html, rendered by social/render.mjs; card-ar.png is its
+       Arabic, for an Arabic page. -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Power Close">
+  <meta property="og:url" content="https://power-close.com/">
+  <meta property="og:title" content="Power Close · Close all tabs that match your keyeword, instantly">
+  <meta property="og:description" content="Power Close is a browser extension for Chrome and Firefox that closes every tab whose address has a domain or keyword in it, and tells you how many before it does.">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:image" content="https://power-close.com/img/social/card-en.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Power Close: Close every tab that matches, at once. Free, for Chrome and Firefox. Beside it, the popup with github.com typed in: “Closes 4 of 12 open tabs.”">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@ArabesqueLabs">
+  <meta name="twitter:title" content="Power Close · Close every tab that matches, at once">
+  <meta name="twitter:description" content="Power Close is a browser extension for Chrome and Firefox that closes every tab whose address has a domain or keyword in it, and tells you how many before it does.">
+  <meta name="twitter:image" content="https://power-close.com/img/social/card-en.png">
+  <meta name="twitter:image:alt" content="Power Close: Close every tab that matches, at once. Free, for Chrome and Firefox. Beside it, the popup with github.com typed in: “Closes 4 of 12 open tabs.”">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://power-close.com/#website",
+          "url": "https://power-close.com/",
+          "name": "Power Close",
+          "inLanguage": "en",
+          "publisher": { "@id": "https://arabesquelabs.com/#organization" }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://power-close.com/#webpage",
+          "url": "https://power-close.com/",
+          "name": "Power Close · Close every tab that matches, at once",
+          "description": "Power Close is a browser extension for Chrome and Firefox that closes every tab whose address has a domain or keyword in it, and tells you how many before it does.",
+          "inLanguage": "en",
+          "isPartOf": { "@id": "https://power-close.com/#website" },
+          "about": { "@id": "https://power-close.com/#app" },
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://power-close.com/img/social/card-en.png",
+            "width": 1200,
+            "height": 630
+          }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://power-close.com/#app",
+          "name": "Power Close",
+          "description": "A browser extension that closes every tab whose address has a domain or keyword in it, in every window, and tells you how many before it does.",
+          "url": "https://power-close.com/",
+          "applicationCategory": "BrowserApplication",
+          "operatingSystem": "Chrome, Firefox 140 or later, Firefox for Android 142 or later",
+          "image": "https://power-close.com/img/social/card-en.png",
+          "screenshot": "https://power-close.com/screenshots/popup-light.png",
+          "downloadUrl": [
+            "https://chrome.google.com/webstore/detail/power-close/jjpmcpmmajigbkjchbkoclipomlmpaaj",
+            "https://addons.mozilla.org/firefox/addon/firefox-power-close/"
+          ],
+          "license": "https://www.gnu.org/licenses/old-licenses/gpl-2.0.html",
+          "isAccessibleForFree": true,
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
+          "author": [
+            { "@id": "https://arabesquelabs.com/#mosab" },
+            { "@type": "Person", "name": "Mina Asham", "url": "https://github.com/mina-asham" }
+          ],
+          "publisher": { "@id": "https://arabesquelabs.com/#organization" },
+          "sameAs": ["https://github.com/ArabesqueLabs/power-close"]
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://arabesquelabs.com/#organization",
+          "name": "Arabesque Labs",
+          "url": "https://arabesquelabs.com/"
+        },
+        {
+          "@type": "Person",
+          "@id": "https://arabesquelabs.com/#mosab",
+          "name": "Mosab Ibrahim",
+          "url": "https://mosab.co.uk/"
+        }
+      ]
+    }
+  </script>
   <link rel="icon" href="img/favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="img/icon-180.png">
   <link rel="stylesheet" href="vendor/arabesque/fonts/fonts.css">
@@ -57,8 +147,8 @@
 
   <div class="al-page hero__body">
     <div class="hero__text">
-      <h1 class="al-display hero__title">Close every tab that matches, at once.</h1>
-      <p class="al-lede hero__lede">Type a domain or a keyword, and Power Close closes every tab with it in
+      <h1 class="al-display hero__title">Close all tabs matching your keyeword, instantly</h1>
+      <p class="al-lede hero__lede">Type a domain name or a keyword, and Power Close closes every tab with it in
         the address, in every window. It tells you how many before it does.</p>
       <div class="al-cluster hero__actions">
         <a class="al-button pc-store pc-store--chrome" href="https://chrome.google.com/webstore/detail/power-close/jjpmcpmmajigbkjchbkoclipomlmpaaj"><img class="pc-store__logo" src="img/logos/chrome.svg" alt="" width="24" height="24">Add to Chrome</a>
@@ -215,7 +305,9 @@
 
 <div class="al-page">
   <footer class="al-footer">
-    <a class="al-lockup" href="/"><span class="al-mark pc-mark" aria-hidden="true"></span><span>Power Close</span></a>
+    <div class="pc-footer-brand">
+      <a class="al-lockup" href="/"><span class="al-mark pc-mark" aria-hidden="true"></span><span>Power Close</span></a>
+    </div>
     <ul class="al-footer__links">
       <li><a class="pc-icon-link" href="https://github.com/ArabesqueLabs/power-close"><svg class="pc-brand-icon" aria-hidden="true" focusable="false"><use href="#pc-icon-github"></use></svg>GitHub</a></li>
       <li><a class="pc-icon-link" href="https://chrome.google.com/webstore/detail/power-close/jjpmcpmmajigbkjchbkoclipomlmpaaj"><svg class="pc-brand-icon" aria-hidden="true" focusable="false"><use href="#pc-icon-chrome-web-store"></use></svg>Chrome Web Store</a></li>
@@ -225,7 +317,16 @@
     <p class="al-footer__legal">Made with ♥  by <a class="al-link al-link--muted" href="https://mosab.co.uk">Mosab Ibrahim</a> at <a class="al-link al-link--muted" href="https://arabesquelabs.com/">Arabesque Labs</a> | © <bdi>2014–2026</bdi>.
     <br />
       Distributed as free software under the <a class="al-link al-link--muted" href="https://github.com/ArabesqueLabs/power-close/blob/master/LICENSE">GNU GPL v2</a> license.
-      </p>
+    <br />
+    <br />
+    <br />
+    <a class="pc-footer-badge" href="https://arabesquelabs.com/">
+      <picture>
+        <source srcset="img/badges/product-of-en-light-star@2x.png" media="(prefers-color-scheme: dark)">
+        <img src="img/badges/product-of-en-dark-star@2x.png" width="253" height="35" alt="A product of Arabesque Labs">
+      </picture>
+    </a>
+    </p>
   </footer>
 </div>
 

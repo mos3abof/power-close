@@ -173,3 +173,19 @@
    until hovered, as theirs. */
 .al-site-header .pc-icon-link { text-decoration: none; }
 .al-site-header .pc-icon-link:hover { text-decoration: underline; }
+
+/* The footer's lockup with the "A product of Arabesque Labs" badge after
+   it (from the design system's brand badges, v0.7.0): dark ink in the
+   light theme, light ink in the dark one. */
+.pc-footer-brand { display: flex; flex-wrap: wrap; align-items: center; gap: var(--al-space-3) var(--al-space-6); }
+.pc-footer-badge { display: inline-flex; }
+.pc-footer-badge img { display: block; max-inline-size: 100%; block-size: auto; }
+
+/* The closing call to action: the quiet pattern falls to a trace behind
+   the heading, buttons and support line in the middle, and comes back in
+   full towards the edges, as the hero's does behind its text. */
+.al-cta.al-pattern--quiet .al-pattern__art,
+.al-cta.al-pattern--quiet .al-pattern__art:dir(rtl) {
+  -webkit-mask-image: radial-gradient(ellipse 55% 80% at center, rgb(0 0 0 / 0.2) 0 55%, black 100%);
+  mask-image: radial-gradient(ellipse 55% 80% at center, rgb(0 0 0 / 0.2) 0 55%, black 100%);
+}
